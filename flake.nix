@@ -22,9 +22,13 @@
     disk_benchmark = {
         url = "git+file:///home/thorb/Code/Sandkasse/Benchmarking/disk";
     };
+
+    parallel_benchmark = {
+        url = "git+file:///home/thorb/Code/Sandkasse/Benchmarking/parallel";
+    };
   };
 
-  outputs = { self, nixpkgs, flake-utils, arithmetic_benchmark, memory_benchmark, disk_benchmark, ... }@inputs:
+  outputs = { self, nixpkgs, flake-utils, arithmetic_benchmark, memory_benchmark, disk_benchmark, parallel_benchmark, ... }@inputs:
 
     flake-utils.lib.eachDefaultSystem (system:
     let
@@ -44,18 +48,20 @@
           memory_benchmark.packages.${system}.default
           arithmetic_benchmark.packages.${system}.default
           disk_benchmark.packages.${system}.default
+          parallel_benchmark.packages.${system}.default
+        ];
+        cmakeFlags = [
+          "-DCMAKE_BUILD_TYPE=Release"
+          "-DCMAKE_PREFIX_PATH='arithmetic_benchmark.url;memory_benchmark.url;disk_benchmark.url;parallel_benchmark.url'"
         ];
         configurePhase = ''
-          cmake -S ${src} -B $out/build -DCMAKE_PREFIX_PATH="arithmetic_benchmark.url;memory_benchmark.url;disk_benchmark.url"
+          cmake -S ${src} -B $out/build
         '';
         buildPhase = ''
           cmake --build $out/build
         '';
         installPhase = ''
-          mkdir $out/install && cmake --install $out/build --prefix=$out/install \
-          && echo "Out: $out" && echo "lib_b: ${memory_benchmark.packages.${system}.default}" && \
-          ln -s ${memory_benchmark.packages.${system}.default} $out/lib_b_install && \
-          ln -s ${memory_benchmark} $out/lib_b
+          mkdir $out/install && cmake --install $out/build --prefix=$out/install
         '';
       };
 
@@ -71,6 +77,7 @@
           arithmetic_benchmark.defaultPackage.${system}.default
           memory_benchmark.defaultPackage.${system}.default
           disk_benchmark.defaultPackage.${system}.default
+          parallel_benchmark.defaultPackage.${system}.default
         ];
         shellHook = ''
           echo "Welcome to the Nix numerical simulation development environment!"

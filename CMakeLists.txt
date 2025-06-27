@@ -12,6 +12,9 @@ find_package(disk_benchmark CONFIG REQUIRED)
 
 # Search for arithmetic_benchmark
 find_package(arithmetic_benchmark CONFIG REQUIRED)
+#
+# Search for parallel_benchmark
+find_package(parallel_benchmark CONFIG REQUIRED)
 
 add_executable(benchmarks main.cpp)
 
@@ -21,6 +24,7 @@ target_link_libraries(benchmarks PRIVATE
     memory_benchmark::memory_benchmark
     disk_benchmark::disk_benchmark
     arithmetic_benchmark::arithmetic_benchmark
+    parallel_benchmark::parallel_benchmark
 )
 
 # Ensure include directories are added for the executable if not already handled by target_link_libraries
@@ -30,6 +34,7 @@ target_include_directories(benchmarks PRIVATE
     ${memory_benchmark_INCLUDE_DIRS}
     ${disk_benchmark_INCLUDE_DIRS}
     ${arithmetic_benchmark_INCLUDE_DIRS}
+    ${parallel_benchmark_INCLUDE_DIRS}
 )
 
 # Optional: Add rpath for development, not usually needed for installed executables
