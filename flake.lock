@@ -134,11 +134,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1751274711,
-        "narHash": "sha256-xosvIDAQY6jgCeKKE+33gP37IWHfRyoP+jbwPIjpT0I=",
+        "lastModified": 1751294722,
+        "narHash": "sha256-HOQbKdATz5CSk7tdl5hSXa+wSIrRzoBTA9DmfuhbRQM=",
         "ref": "refs/heads/main",
-        "rev": "054748c64eac5f528691c7c09fa624c8dc0e35b1",
-        "revCount": 6,
+        "rev": "94e21897d75a1d3742400c84669b3d7188625ada",
+        "revCount": 7,
         "type": "git",
         "url": "file:///home/thorb/Code/Sandkasse/Benchmarking/memory"
       },
@@ -233,11 +233,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1751274688,
-        "narHash": "sha256-IH6KMu4kb+rkuLfiLo4fothB3T7fM7tR3jb0XQ+5CDo=",
+        "lastModified": 1751294694,
+        "narHash": "sha256-5H9ktAOyDa2B0ihVk4WD7j7TqUIbJEu1Z4xiSdDBgps=",
         "ref": "refs/heads/main",
-        "rev": "acd56c357038f847a42a6f8c8f5c2490f703c687",
-        "revCount": 6,
+        "rev": "3a1e0d4d79af5975882660caa2a538bb8834328c",
+        "revCount": 7,
         "type": "git",
         "url": "file:///home/thorb/Code/Sandkasse/Benchmarking/parallel"
       },

@@ -11,8 +11,7 @@
     # Provide a *relative* path as a default or a sensible fallback.
     # The user will override this in their local setup.
 
-    arithmetic_benchmark = {
-        url = "git+file:///home/thorb/Code/Sandkasse/Benchmarking/arithmetic";
+    arithmetic_benchmark = { url = "git+file:///home/thorb/Code/Sandkasse/Benchmarking/arithmetic";
     };
 
     memory_benchmark = {
@@ -52,16 +51,25 @@
         ];
         cmakeFlags = [
           "-DCMAKE_BUILD_TYPE=Release"
-          "-DCMAKE_PREFIX_PATH='arithmetic_benchmark.url;memory_benchmark.url;disk_benchmark.url;parallel_benchmark.url'"
+          # Does not seem to need this
+          # "-DCMAKE_PREFIX_PATH='arithmetic_benchmark.url;memory_benchmark.url;disk_benchmark.url;parallel_benchmark.url'"
         ];
         configurePhase = ''
-          cmake -S ${src} -B $out/build
+          cmake -S ${src} -B $out/build --debug-find
         '';
         buildPhase = ''
           cmake --build $out/build
         '';
         installPhase = ''
           mkdir $out/install && cmake --install $out/build --prefix=$out/install
+          runHook postInstall
+        '';
+        postInstall = ''
+          mkdir -p $out/lib
+          ln -s ${arithmetic_benchmark} $out/lib/arithmetic
+          ln -s ${disk_benchmark} $out/lib/disk
+          ln -s ${memory_benchmark} $out/lib/memory
+          ln -s ${parallel_benchmark} $out/lib/parallel
         '';
       };
 

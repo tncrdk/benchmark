@@ -55,5 +55,6 @@ docker_rebuild_all:
 	rm -rf build/*
 	cmake -B build \
 		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_PREFIX_PATH="$(docker_parallel)/install;$(docker_arithmetic)/install;$(docker_disk)/install;$(docker_memory)/install"
+		-DCMAKE_PREFIX_PATH="$(docker_parallel)/install;$(docker_arithmetic)/install;$(docker_disk)/install;$(docker_memory)/install" \
+		--debug-find
 	cmake --build build

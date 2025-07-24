@@ -2,12 +2,14 @@
 #include "memory_benchmark.h"
 #include "arithmetic_benchmark.h"
 #include "parallel_benchmark.h"
+#include <iostream>
 
 int main() {
     arithmetic_benchmark::run();
     memory_benchmark::run();
     disk_benchmark::run();
     parallel::run();
+    std::cout << "Hello" << std::endl;
 
     return 0;
 }
