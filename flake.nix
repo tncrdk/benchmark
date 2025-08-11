@@ -11,20 +11,26 @@
     # Provide a *relative* path as a default or a sensible fallback.
     # The user will override this in their local setup.
 
-    arithmetic_benchmark = { url = "git+file:///home/thorb/Code/Projects/SINTEF/Foo/Benchmarking/arithmetic";
+    arithmetic_benchmark = {
+        # url = "git+file:///home/thorb/Code/Projects/SINTEF/Foo/Benchmarking/arithmetic";
+        url = "git+https://github.com/tncrdk/arithmetic.git";
     };
 
     memory_benchmark = {
-        url = "git+file:///home/thorb/Code/Projects/SINTEF/Foo/Benchmarking/memory";
+        # url = "git+file:///home/thorb/Code/Projects/SINTEF/Foo/Benchmarking/memory";
+        url = "git+https://github.com/tncrdk/memory.git";
     };
 
     disk_benchmark = {
-        url = "git+file:///home/thorb/Code/Projects/SINTEF/Foo/Benchmarking/disk";
+        # url = "git+file:///home/thorb/Code/Projects/SINTEF/Foo/Benchmarking/disk";
+        url = "git+https://github.com/tncrdk/disk.git";
     };
 
     parallel_benchmark = {
-        url = "git+file:///home/thorb/Code/Projects/SINTEF/Foo/Benchmarking/parallel";
+        # url = "git+file:///home/thorb/Code/Projects/SINTEF/Foo/Benchmarking/parallel";
+        url = "git+https://github.com/tncrdk/parallel.git";
     };
+
   };
 
   outputs = { self, nixpkgs, flake-utils, arithmetic_benchmark, memory_benchmark, disk_benchmark, parallel_benchmark, ... }@inputs:
