@@ -6,12 +6,15 @@ FROM ubuntu:24.04
 
 # Install system dependencies (from your build_scripts/ or notes)
 RUN apt-get update
-RUN apt-get install -y \
+# RUN apt-get update --snapshot 20231102T030400Z
+RUN apt-get install hello --snapshot 20231102T030400Z
+RUN apt-get install -y --snapshot 20240410T203634Z \
         cmake \
         g++ \
         gfortran \
         git \
         curl \
+        python3 \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
