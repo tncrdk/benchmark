@@ -1,7 +1,7 @@
-parallel = /home/thorb/Code/Sandkasse/Benchmarking/parallel
-arithmetic = /home/thorb/Code/Sandkasse/Benchmarking/arithmetic
-disk = /home/thorb/Code/Sandkasse/Benchmarking/disk
-memory = /home/thorb/Code/Sandkasse/Benchmarking/memory
+parallel = /home/thorb/Code/Projects/SINTEF/Benchmarking/parallel
+arithmetic = /home/thorb/Code/Projects/SINTEF/Benchmarking/arithmetic
+disk = /home/thorb/Code/Projects/SINTEF/Benchmarking/disk
+memory = /home/thorb/Code/Projects/SINTEF/Benchmarking/memory
 
 docker_parallel = /home/ubuntu/Code/parallel/
 docker_arithmetic = /home/ubuntu/Code/arithmetic/
