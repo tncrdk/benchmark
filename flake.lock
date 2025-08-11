@@ -12,11 +12,11 @@
         "rev": "6ec0dfc02deb1eca0549c551bc04d6cc57fec592",
         "revCount": 6,
         "type": "git",
-        "url": "file:///home/thorb/Code/Sandkasse/Benchmarking/arithmetic"
+        "url": "file:///home/thorb/Code/Projects/SINTEF/Foo/Benchmarking/arithmetic"
       },
       "original": {
         "type": "git",
-        "url": "file:///home/thorb/Code/Sandkasse/Benchmarking/arithmetic"
+        "url": "file:///home/thorb/Code/Projects/SINTEF/Foo/Benchmarking/arithmetic"
       }
     },
     "disk_benchmark": {
@@ -31,11 +31,11 @@
         "rev": "295da70129303a0e09f3a011c581888d7a056b55",
         "revCount": 8,
         "type": "git",
-        "url": "file:///home/thorb/Code/Sandkasse/Benchmarking/disk"
+        "url": "file:///home/thorb/Code/Projects/SINTEF/Foo/Benchmarking/disk"
       },
       "original": {
         "type": "git",
-        "url": "file:///home/thorb/Code/Sandkasse/Benchmarking/disk"
+        "url": "file:///home/thorb/Code/Projects/SINTEF/Foo/Benchmarking/disk"
       }
     },
     "flake-utils": {
@@ -140,11 +140,11 @@
         "rev": "285a2c121b5c6ea91e3b709f3383ac029647113e",
         "revCount": 8,
         "type": "git",
-        "url": "file:///home/thorb/Code/Sandkasse/Benchmarking/memory"
+        "url": "file:///home/thorb/Code/Projects/SINTEF/Foo/Benchmarking/memory"
       },
       "original": {
         "type": "git",
-        "url": "file:///home/thorb/Code/Sandkasse/Benchmarking/memory"
+        "url": "file:///home/thorb/Code/Projects/SINTEF/Foo/Benchmarking/memory"
       }
     },
     "nixpkgs": {
@@ -239,11 +239,11 @@
         "rev": "d69e265746c2323a7fa87a5d9c5eea8e8c290e1f",
         "revCount": 8,
         "type": "git",
-        "url": "file:///home/thorb/Code/Sandkasse/Benchmarking/parallel"
+        "url": "file:///home/thorb/Code/Projects/SINTEF/Foo/Benchmarking/parallel"
       },
       "original": {
         "type": "git",
-        "url": "file:///home/thorb/Code/Sandkasse/Benchmarking/parallel"
+        "url": "file:///home/thorb/Code/Projects/SINTEF/Foo/Benchmarking/parallel"
       }
     },
     "root": {

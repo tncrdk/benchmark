@@ -11,19 +11,19 @@
     # Provide a *relative* path as a default or a sensible fallback.
     # The user will override this in their local setup.
 
-    arithmetic_benchmark = { url = "git+file:///home/thorb/Code/Prosjekt/SINTEF/arithmetic";
+    arithmetic_benchmark = { url = "git+file:///home/thorb/Code/Projects/SINTEF/Foo/Benchmarking/arithmetic";
     };
 
     memory_benchmark = {
-        url = "git+file:///home/thorb/Code/Prosjekt/SINTEF/Benchmarking/memory";
+        url = "git+file:///home/thorb/Code/Projects/SINTEF/Foo/Benchmarking/memory";
     };
 
     disk_benchmark = {
-        url = "git+file:///home/thorb/Code/Prosjekt/SINTEF/Benchmarking/disk";
+        url = "git+file:///home/thorb/Code/Projects/SINTEF/Foo/Benchmarking/disk";
     };
 
     parallel_benchmark = {
-        url = "git+file:///home/thorb/Code/Prosjekt/SINTEF/parallel";
+        url = "git+file:///home/thorb/Code/Projects/SINTEF/Foo/Benchmarking/parallel";
     };
   };
 
